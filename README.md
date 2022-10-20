@@ -15,6 +15,22 @@ separate repository from Ajapaik-web for Wikimedia OAUTH and image uploading
 ## Edit local configuration to server/settings/local.py 
 * see registering Oauth1 consumer for getting information needed
 
+### Oauth consumer proposal checklist
+* Oauth version: OAuth 1.0a consumer
+* Application name: use a name that indicates that you are developing locally
+* Leave "This consumer is for use only by <your username>" unchecked
+* Contact email address: Use a valid email where you can be reached.
+* Applicable project: All is fine
+* OAuth "callback" URL: http://127.0.0.1:8000/
+* Select: Allow consumer to specify a callback in requests and use "callback" URL above as a required prefix.
+* Types of grants being requested: (for uploading photos)
+.* Edit existing pages
+.* Create, edit, and move pages
+.* Upload new files
+.* Upload, replace, and move files
+* Public RSA key: You can leave this empty at the moment.
+
+
 ## Run migrations and start test server
 ```
 > python manage.py makemigrations webservice
@@ -45,22 +61,8 @@ To request changes to the software configuration, the creation of new Beta Clust
 If you are doing more testing then you can request Oauth approval rights to beta cluster for yourself.
 * https://phabricator.wikimedia.org/maniphest/task/create/?projects=Beta-Cluster
 
-## Oauth consumer proposal checklist
-* Oauth version: OAuth 1.0a consumer
-* Application name: use a name that indicates that you are developing locally
-* Leave "This consumer is for use only by <your username>" unchecked
-* Contact email address: Use a valid email where you can be reached.
-* Applicable project: All is fine
-* OAuth "callback" URL: http://127.0.0.1:8000/
-* Select: Allow consumer to specify a callback in requests and use "callback" URL above as a required prefix.
-* Types of grants being requested: (for uploading photos)
-.* Edit existing pages
-.* Create, edit, and move pages
-.* Upload new files
-.* Upload, replace, and move files
-* Public RSA key: You can leave this empty at the moment.
 
-# For reseting the database
+# Reseting the database
 > rm src/server/db.sqlite3
 > rm -rf src/webservice/migrations/*
 > python manage.py makemigrations webservice
