@@ -15,7 +15,7 @@ separate repository from Ajapaik-web for Wikimedia OAUTH and image uploading
 ## Edit local configuration to server/settings/local.py 
 * see registering Oauth1 consumer for getting information needed
 
-### Register OAUTH1 consumer 
+#### Register OAUTH1 consumer 
 * Wikimedia LIVE: https://meta.wikimedia.org/wiki/Special:OAuthConsumerRegistration/propose 
 * Wikimedia Beta: https://meta.wikimedia.beta.wmflabs.org/wiki/meta:Special:OAuthConsumerRegistration/propose
 
@@ -24,7 +24,7 @@ If you are doing more testing then you can request Oauth approval rights to beta
 * https://phabricator.wikimedia.org/maniphest/task/create/?projects=Beta-Cluster
 
 
-### Oauth consumer proposal checklist
+#### Oauth consumer proposal checklist
 * Oauth version: OAuth 1.0a consumer
 * Application name: use a name that indicates that you are developing locally
 * Leave "This consumer is for use only by <your username>" unchecked
