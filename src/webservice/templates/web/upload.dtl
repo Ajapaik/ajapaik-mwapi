@@ -1,0 +1,32 @@
+{% block content %}
+  <hr>
+  <h1>Upload file</h1>
+  <dl><dt><b>Server:</b></dt><dd>  <a href='{{ commons_server_url }}'>{{ commons_server_url }}</a></dd></dl>
+
+  {% if upload_status == 'OK' %}
+  <p><a href='/upload'>Upload new file</a></p>
+  {% if uploaded_file_url %}
+    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+  {% endif %}
+    <p>Upload status: {{ upload_status }}</p>
+
+
+
+  {% else %}
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <dl>
+    <dt><b>File</b></dt><dd><input type="file" name="file"><dd></dd>
+    <dt><b>Title</b></dt><dd><input type="text" name="title" size=128></dd>
+    <dt><b>Wikitext</b></dt><dd><textarea name="wikitext" rows="10" cols="100"></textarea></dd>
+    <dt><b>Date</b></dt><dd><input type="text" name="date" size=32></dd>
+    <dt><b>Author</b></dt><dd><input type="text" name="author" size=16></dd>
+    <dt><b>Latitude</b></dt><dd><input type="text" name="latitude" size=10></dd>
+    <dt><b>Longitude</b></dt><dd><input type="text" name="longitude" size=10></dd>
+    <dt><b>Categories</b></dt><dd><input type="text" name="longitude" size=128></dd>
+    </dl><button type="submit">Upload</button>
+  </form>
+
+  {% endif %}
+
+{% endblock %}
