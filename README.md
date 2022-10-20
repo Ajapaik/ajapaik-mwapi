@@ -16,8 +16,8 @@ separate repository from Ajapaik-web for Wikimedia OAUTH and image uploading
 * see registering Oauth1 consumer for getting information needed
 
 #### Register OAUTH1 consumer 
-* Wikimedia LIVE: https://meta.wikimedia.org/wiki/Special:OAuthConsumerRegistration/propose 
-* Wikimedia Beta: https://meta.wikimedia.beta.wmflabs.org/wiki/meta:Special:OAuthConsumerRegistration/propose
+* Wikimedia: https://meta.wikimedia.org/wiki/Special:OAuthConsumerRegistration/propose 
+* Wikimedia Beta-Cluster: https://meta.wikimedia.beta.wmflabs.org/wiki/meta:Special:OAuthConsumerRegistration/propose
 
 To request changes to the software configuration, the creation of new Beta Cluster wikis or user rights, please file a task in Phabricator.
 If you are doing more testing then you can request Oauth approval rights to beta cluster for yourself.
