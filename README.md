@@ -69,12 +69,14 @@ If you are doing more testing then you can request Oauth approval rights to beta
 # URLS
 * https://127.0.0.1:8000/
 * https://127.0.0.1:8000/profile
+* https://127.0.0.1:8000/upload
+* https://127.0.0.1:8000/accounts/login
 * https://127.0.0.1:8000/logout
 * https://127.0.0.1:8000/accounts/launcher/ (Flutter App magic link)
 
 ## REST API
 * https://127.0.0.1:8000/api/profile
-* https://127.0.0.1:8000/api/upload_file
+* https://127.0.0.1:8000/api/upload
 * https://127.0.0.1:8000/api/logout
 
 # Port forwarding
