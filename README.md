@@ -40,16 +40,17 @@ If you are doing more testing then you can request Oauth approval rights to beta
 * Public RSA key: You can leave this empty at the moment.
 
 
-## Run migrations and start test server
+## Run migrations 
 ```
 > python manage.py makemigrations webservice
 > python manage.py migrate
+
+## Start test server
 > python manage.py runserver 8000
 ```
-
 Open https://127.0.0.1:8000/ with browser and do OAUTH login.
 
-# Port forwarding
+### Port forwarding
 Making server visible on the public internet. Example only (command needs to be edited to get it working)
 
 ```
