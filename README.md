@@ -15,7 +15,7 @@ separate repository from Ajapaik-web for Wikimedia OAUTH and image uploading
 ## Edit local configuration to server/settings/local.py 
 * see registering Oauth1 consumer for getting information needed
 
-###Register OAUTH1 consumer 
+### Register OAUTH1 consumer 
 * Wikimedia LIVE: https://meta.wikimedia.org/wiki/Special:OAuthConsumerRegistration/propose 
 * Wikimedia Beta: https://meta.wikimedia.beta.wmflabs.org/wiki/meta:Special:OAuthConsumerRegistration/propose
 
