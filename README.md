@@ -12,15 +12,17 @@ separate repository from Ajapaik-web for Wikimedia OAUTH and image uploading
 > cd src
 > cp server/settings/local.example.py server/settings/local.py
 ```
-# Edit local configuration to server/settings/local.py (see registering Oauth1 consumer)
+# Edit local configuration to server/settings/local.py 
+* see registering Oauth1 consumer
 
+# Run migrations and start test server
 ```
 > python manage.py makemigrations webservice
 > python manage.py migrate
-> python manage.py runserver 9001
+> python manage.py runserver 8000
 ```
 
-Open https://127.0.0.1:9000/ with browser and do OAUTH login.
+Open https://127.0.0.1:8000/ with browser and do OAUTH login.
 
 # Management commands
 
@@ -74,3 +76,10 @@ If you are doing more testing then you can request Oauth approval rights to beta
 * https://127.0.0.1:8000/api/profile
 * https://127.0.0.1:8000/api/upload_file
 * https://127.0.0.1:8000/api/logout
+
+# Port forwarding
+Example command for portforwards
+
+```
+> sudo -u username ssh -N -L 8000:127.0.0.1:8000 username@server.org -i /home/username/.ssh/id_rsa
+```
