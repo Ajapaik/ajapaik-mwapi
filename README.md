@@ -11,9 +11,28 @@ separate repository from Ajapaik-web for Wikimedia OAUTH and image uploading
 > pip install -r requirements.txt
 > cd src
 > cp server/settings/local.example.py server/settings/local.py
-#Edit local configuration to server/settings/local.py (see registering Oauth1 consumer)
+```
+# Edit local configuration to server/settings/local.py (see registering Oauth1 consumer)
+
+```
 > python manage.py makemigrations webservice
 > python manage.py migrate
+> python manage.py runserver 9001
+```
+
+Open https://127.0.0.1:9000/ with browser and do OAUTH login.
+
+# Management commands
+
+This will show users logged in
+src/server/management/commands/userinfo.py
+```
+> python manage.py userinfo 
+```
+This will upload one random image from Wikimedia Commons to Beta Commons
+src/server/management/commands/uploadtest.py
+```
+> python manage.py uploadtest  
 ```
 
 #Register OAUTH1 consumer 
@@ -45,4 +64,13 @@ If you are doing more testing then you can request Oauth approval rights to beta
 > python manage.py makemigrations webservice
 > python manage.py migrate
 
+# URLS
+* https://127.0.0.1:8000/
+* https://127.0.0.1:8000/profile
+* https://127.0.0.1:8000/logout
+* https://127.0.0.1:8000/accounts/launcher/ (Flutter App magic link)
 
+## REST API
+* https://127.0.0.1:8000/api/profile
+* https://127.0.0.1:8000/api/upload_file
+* https://127.0.0.1:8000/api/logout
