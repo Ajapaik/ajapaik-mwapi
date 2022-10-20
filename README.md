@@ -12,10 +12,10 @@ separate repository from Ajapaik-web for Wikimedia OAUTH and image uploading
 > cd src
 > cp server/settings/local.example.py server/settings/local.py
 ```
-# Edit local configuration to server/settings/local.py 
-* see registering Oauth1 consumer
+## Edit local configuration to server/settings/local.py 
+* see registering Oauth1 consumer for getting information needed
 
-# Run migrations and start test server
+## Run migrations and start test server
 ```
 > python manage.py makemigrations webservice
 > python manage.py migrate
