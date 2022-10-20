@@ -52,23 +52,25 @@ Open https://127.0.0.1:8000/ with browser and do OAUTH login.
 # Management commands
 
 This will show users logged in
-src/server/management/commands/userinfo.py
+* [src/server/management/commands/userinfo.py](https://github.com/Ajapaik/ajapaik-mwapi/blob/main/src/server/management/commands/userinfo.py)
 ```
 > python manage.py userinfo 
 ```
 This will upload one random image from Wikimedia Commons to Beta Commons
-src/server/management/commands/uploadtest.py
+* [src/server/management/commands/uploadtest.py](https://github.com/Ajapaik/ajapaik-mwapi/blob/main/src/server/management/commands/uploadtest.py)
 ```
 > python manage.py uploadtest  
 ```
 
 
 # Reseting the database
+```
 > rm src/server/db.sqlite3
 > rm -rf src/webservice/migrations/*
 > python manage.py makemigrations webservice
 > python manage.py migrate
-
+```
+  
 # URLS
 * https://127.0.0.1:8000/
 * https://127.0.0.1:8000/profile
