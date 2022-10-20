@@ -49,6 +49,14 @@ If you are doing more testing then you can request Oauth approval rights to beta
 
 Open https://127.0.0.1:8000/ with browser and do OAUTH login.
 
+# Port forwarding
+Making server visible on the public internet. Example only (command needs to be edited to get it working)
+
+```
+> sudo -u username ssh -N -L 8000:127.0.0.1:8000 username@server.org -i /home/username/.ssh/id_rsa
+```
+
+
 # Management commands
 
 This will show users logged in
@@ -84,9 +92,3 @@ This will upload one random image from Wikimedia Commons to Beta Commons
 * https://127.0.0.1:8000/api/upload
 * https://127.0.0.1:8000/api/logout
 
-# Port forwarding
-Example command for portforwards
-
-```
-> sudo -u username ssh -N -L 8000:127.0.0.1:8000 username@server.org -i /home/username/.ssh/id_rsa
-```
