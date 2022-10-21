@@ -3,6 +3,7 @@ from requests_oauthlib import OAuth1Session
 from oauthlib.oauth2 import TokenExpiredError
 import json
 from server.settings import SOCIAL_AUTH_MEDIAWIKI_KEY,SOCIAL_AUTH_MEDIAWIKI_SECRET, USE_BETA_COMMONS
+from webservice.forms import UploadFileForm
 
 def get_wikimediacommons_url():
     if USE_BETA_COMMONS:
@@ -69,7 +70,7 @@ def upload_file_to_commons(client, source_filename, target_filename, wikitext, c
     return r
 
 def check_and_upload_file_to_commons(request):
-    form = forms.UploadFileForm(request.POST, request.FILES)
+    form = UploadFileForm(request.POST, request.FILES)
     if not form.is_valid():
         return False
 
@@ -77,7 +78,6 @@ def check_and_upload_file_to_commons(request):
     source_filename=request.FILES['file'].temporary_file_path()
     target_filename=form.cleaned_data['title']
     wikitext=form.cleaned_data['wikitext']
-    uploaded_file_url=get_wikimediacommons_url() + '/wiki/File:' +target_filename +'.jpeg'
     
     client=get_mediawiki_client(user_id)
     if not client:
@@ -94,4 +94,5 @@ def check_and_upload_file_to_commons(request):
 
     comment="Uploading self photographed test file to Commons. CC-BY"
     ret= upload_file_to_commons(client, source_filename, target_filename, wikitext, comment)
+#    ret['uploaded_file_url']=get_wikimediacommons_url() + '/wiki/File:' +target_filename +'.jpeg'
     return ret

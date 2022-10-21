@@ -29,11 +29,12 @@ def logout_view(request):
 # Uploads file to Wikimedia Commons
 def upload_file(request):
     if request.method == 'POST':
+        form = UploadFileForm(request.POST, request.FILES)
         ret=check_and_upload_file_to_commons(request)
         if ret:
-            return render(request, 'web/profile.dtl', {'form': form, 'upload_status':'OK', 'uploaded_file_url':uploaded_file})
+            return render(request, 'web/profile.dtl', {'form': form, 'upload_status':'OK', 'uploaded_file_url':''})
         else:
-            return render(request, 'web/profile.dtl', {'form': form, 'upload_status':'ERROR 2'})
+            return render(request, 'web/profile.dtl', {'form': form, 'upload_status': 'ERROR 2'})
     else:
         form = UploadFileForm()
         return render(request, 'web/profile.dtl', {'form': form, 'upload_status':'ERROR 1'})
