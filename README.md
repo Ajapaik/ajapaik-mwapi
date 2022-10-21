@@ -16,7 +16,7 @@ separate repository from Ajapaik-web for Wikimedia OAUTH and image uploading
 * USE_BETA_COMMONS defines if we are using Wikimedia production or [Beta-cluster](https://commons.wikimedia.beta.wmflabs.org). Use Beta for developing.  
 * SECRET_KEY value is long random string
 * CSRF_TRUSTED_ORIGINS and ALLOWED_HOSTS should match to your hostname if it is other than localhost
-* SOCIAL_AUTH* = Oauth1 consumer info. See [My first Django OAuth tool](https://wikitech.wikimedia.org/wiki/Help:Toolforge/My_first_Django_OAuth_tool) for more info.
+* SOCIAL_AUTH* = Oauth1 consumer settings. See [My first Django OAuth tool](https://wikitech.wikimedia.org/wiki/Help:Toolforge/My_first_Django_OAuth_tool) for more info.
 
 #### Register OAUTH1 consumer 
 * Wikimedia: https://meta.wikimedia.org/wiki/Special:OAuthConsumerRegistration/propose 
