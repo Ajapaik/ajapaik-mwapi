@@ -14,6 +14,7 @@ separate repository from Ajapaik-web for Wikimedia OAUTH and image uploading
 ```
 ## Edit local configuration to server/settings/local.py 
 * see registering Oauth1 consumer for getting information needed
+* More info in: [My first Django OAuth tool](https://wikitech.wikimedia.org/wiki/Help:Toolforge/My_first_Django_OAuth_tool)
 
 #### Register OAUTH1 consumer 
 * Wikimedia: https://meta.wikimedia.org/wiki/Special:OAuthConsumerRegistration/propose 
